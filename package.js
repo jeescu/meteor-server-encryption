@@ -17,8 +17,8 @@ Package.onUse(function(api) {
   api.use('matb33:collection-hooks');
   api.mainModule('encryption.js');
 
-  api.addFiles(['lib/client/collectionDecryption.js', 'lib/client/decryptionHook.js', 'lib/encryptionUtil.js'], 'client');
-  api.addFiles(['lib/server/collectionEncryption.js', 'lib/server/encryptionHook.js', 'lib/encryptionUtil.js'], 'server');
+  api.addFiles(['lib/client/collectionDecryption.js', 'lib/client/decryptionHook.js', 'lib/util/collectionFieldUtil.js', 'lib/util/encryptionUtil.js'], 'client');
+  api.addFiles(['lib/server/collectionEncryption.js', 'lib/server/encryptionHook.js', 'lib/util/encryptionUtil.js'], 'server');
 
   api.export('EncryptCollection', 'server');
   api.export('DecryptCollection', 'client');
