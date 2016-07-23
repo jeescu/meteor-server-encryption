@@ -46,7 +46,7 @@ Meteor.startup(function() {
 
 ### Encryption options
 
-## Passphrase
+#### Passphrase
 Specify your collection and fields to decrypt.
 
 ```javascript
@@ -54,12 +54,6 @@ Encryption.passphrase('passphrase');
 ```
 
 __Important__: Should be defined on both server and client.
-
---------------------------------------------------------------------------------
-
-## Important notes
-
-- Since this is server side, db transactions from client is through meteor methods only. 
 
 --------------------------------------------------------------------------------
 
