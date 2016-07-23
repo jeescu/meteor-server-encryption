@@ -23,7 +23,7 @@ var TestCollection = new Mongo.Collection('test');
 
 Meteor.startup(function() {
   if (Meteor.isServer) {
-    EncryptCollection(TestCollection, ['field1', 'field2'])
+    EncryptCollection(TestCollection, ['field1', 'field2']);
   }
 });
 ```
@@ -37,12 +37,23 @@ Specify your collection and fields to decrypt.
 ```javascript
 Meteor.startup(function() {
   if (Meteor.isClient) {
-    DecryptCollection(TestCollection, ['field1', 'field2'])
+    DecryptCollection(TestCollection, ['field1', 'field2']);
   }
 }
 ```
 
-__Important__: This allows you to choose what collections and fields to decrypt only.
+--------------------------------------------------------------------------------
+
+### Encryption options
+
+## Passphrase
+Specify your collection and fields to decrypt.
+
+```javascript
+Encryption.passphrase('passphrase');
+```
+
+__Important__: Should be defined on both server and client.
 
 --------------------------------------------------------------------------------
 
