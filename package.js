@@ -1,6 +1,6 @@
 Package.describe({
   name: 'escu:encryption',
-  version: '0.0.1',
+  version: '0.0.2',
   // Brief, one-line summary of the package.
   summary: 'Simple server side data encryption using AES and Collection Hook packages',
   // URL to the Git repository containing the source code for this package.
@@ -13,8 +13,8 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.3.2.4');
   api.use('ecmascript');
-  api.use('jparker:crypto-aes');
-  api.use('matb33:collection-hooks');
+  api.use('jparker:crypto-aes@0.1.0');
+  api.use('matb33:collection-hooks@0.7.15');
   api.mainModule('encryption.js');
 
   api.addFiles(['lib/client/collectionDecryption.js', 'lib/client/decryptionHook.js', 'lib/util/collectionFieldUtil.js', 'lib/util/encryptionUtil.js'], 'client');

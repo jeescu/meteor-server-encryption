@@ -9,7 +9,7 @@ Please refer to [History.md](History.md) for a summary of recent changes.
 Installation:
 
 ```
-Not yet published
+meteor add escu:encryption
 ```
 
 --------------------------------------------------------------------------------
