@@ -21,9 +21,11 @@ Specify your collection and fields to encrypt.
 ```javascript
 var TestCollection = new Mongo.Collection('test');
 
-if (Meteor.server) {
-  EncryptCollection(TestCollection, ['field1', 'field2'])
-}
+Meteor.startup(function() {
+  if (Meteor.isServer) {
+    EncryptCollection(TestCollection, ['field1', 'field2'])
+  }
+});
 ```
 
 --------------------------------------------------------------------------------
@@ -33,8 +35,10 @@ if (Meteor.server) {
 Specify your collection and fields to decrypt.
 
 ```javascript
-if (Meteor.client) {
-  DecryptCollection(TestCollection, ['field1', 'field2'])
+Meteor.startup(function() {
+  if (Meteor.isClient) {
+    DecryptCollection(TestCollection, ['field1', 'field2'])
+  }
 }
 ```
 
@@ -50,9 +54,4 @@ __Important__: This allows you to choose what collections and fields to decrypt 
 
 ## Maintainer
 
-- John Edward ([john2424](https://github.com/john2424))
-
-## Contributors
-
-- Jovany Steven Navares
-- Jeserie Golo
+- John Edward Escuyos ([jeescu](https://github.com/jeescu))
