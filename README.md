@@ -67,7 +67,7 @@ Can encrypt/decrypt sub fields up to 4 level.
 By default package has its passphrase `littleRabbitJumper123`. I recommend to define your own.
 
 ```javascript
-Encryption.passphrase('passphrase');
+EncryptionUtils.passphrase('passphrase');
 ```
 
 __Important__: Should be defined on both server and client.

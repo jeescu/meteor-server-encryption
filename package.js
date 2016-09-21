@@ -24,6 +24,7 @@ Package.onUse(function(api) {
   api.export('DecryptCollection', 'client');
 
   api.export('EncryptionUtils', 'server');
+  api.export('EncryptionUtils', 'client');
 });
 
 Package.onTest(function(api) {
